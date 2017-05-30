@@ -1,0 +1,43 @@
+/**
+ * Copyright 2017 eiathom
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.sanger.api.labware.container;
+
+import com.sanger.api.labware.container.sample.Sample;
+import com.sanger.api.labware.location.Locationable;
+
+/**
+ * Interface providing an object the ability to contain {@link Sample}</br>
+ * Could contain any type of {@link Sample}
+ * 
+ * @author eiathom
+ *
+ */
+public interface Container<T> extends Locationable {
+
+    /**
+     * @return the {@link Sample} data in this {@link Container}
+     */
+    T getSamples();
+
+    /**
+     * Copy {@link Sample} data from another {@link Container} to this {@link Container}
+     * 
+     * @param container
+     */
+    @SuppressWarnings("rawtypes")
+    void copySamples(final Container container);
+
+}
