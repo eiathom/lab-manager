@@ -1,9 +1,12 @@
-LabManager API written in JavaSE_1.7
-Module built with Maven_3.5.1
+# LabManager API
 
-API as open to extension as possible
+* written in JavaSE_1.7
+* Module built with Maven_3.5.1
+* API as open to extension as possible.
 
-Main.java
-	view and run the file to see how we find individual Well objects
+This API models the various objects used and associated in a genetic analysis lab.
 
-
+see:
+```
+Main.java: view and run the file to see how we find individual Well objects
+```
